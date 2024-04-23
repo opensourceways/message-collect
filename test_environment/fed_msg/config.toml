@@ -6,9 +6,15 @@ amqp_url = "amqps://fedora:@rabbitmq.fedoraproject.org/%2Fpublic_pubsub"
 callback = "fedora_messaging.example:printer"
 
 [tls]
+#ca_cert = "test_environment/fed_msg/certs/cacert.pem"
+#keyfile = "test_environment/fed_msg/certs/fedora-key.pem"
+#certfile = "test_environment/fed_msg/certs/fedora-cert.pem"
 ca_cert = "/etc/fedora-messaging/cacert.pem"
 keyfile = "/etc/fedora-messaging/fedora-key.pem"
 certfile = "/etc/fedora-messaging/fedora-cert.pem"
+
+
+
 
 [client_properties]
 app = "Example Application"
