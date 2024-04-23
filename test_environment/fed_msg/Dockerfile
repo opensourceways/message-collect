@@ -1,7 +1,7 @@
 FROM python:3.10
 LABEL authors="tommylike"
 
-RUN pip install fedora-messaging && apt update
+RUN pip install fedora-messaging  && pip install kafka-python && apt update
 
 COPY config.toml /root/config.toml
 COPY main.py /root/main.py
